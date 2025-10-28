@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #F8F9FA;
+    color: #333;
+}
+
+header {
+    background: #601d1d;
+    color: white;
+    padding: 16px;
+    text-align: center;
+}
+
+main {
+    max-width: 1024px;
+    margin: 20px auto;
+    padding: 0 16px;
+}
+
+section {
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, .05),
+        0 15px 40px rgba(166, 173, 201, .2);
+}
+
+h2 {
+    margin-top: 0;
+    color: #601d1d;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form label {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+section form div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+section form label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+}
+
+section form div:has(input[type="checkbox"]) {
+    flex-direction: row;
+    align-items: center;
+}
+
+section form div:has(input[type="checkbox"]) label {
+    margin-bottom: 0;
+    margin-right: 8px;
+}
+
+form input[type="text"],
+form input[type="number"] {
+    padding: 10px 14px;
+    border: 2px solid #7e3333;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #F5F1FF;
+}
+
+form input[type="checkbox"] {
+    transform: scale(1.2);
+    margin-left: 8px;
+}
+
+form button {
+    align-self: flex-start;
+    background: #601d1d;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #601d1d;
+}
+
+[data-testid="bookItem"] {
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    background: #fff;
+}
+
+[data-testid="bookItem"] h3 {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+[data-testid="bookItem"] p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+[data-testid="bookItem"] div {
+    margin-top: 10px;
+}
+
+[data-testid="bookItem"] button {
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    margin-right: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+[data-testid="bookItemIsCompleteButton"] {
+    background: #601d1d;
+    color: white;
+}
+
+[data-testid="bookItemIsCompleteButton"]:hover {
+    background: #4e1515;
+}
+
+[data-testid="bookItemDeleteButton"] {
+    background: #E74C3C;
+    color: white;
+}
+
+[data-testid="bookItemDeleteButton"]:hover {
+    background: #C0392B;
+}
+
+[data-testid="bookItemEditButton"] {
+    background: #F1C40F;
+    color: black;
+}
+
+[data-testid="bookItemEditButton"]:hover {
+    background: #D4AC0D;
+}
+
+.inline-edit {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.inline-edit input {
+    padding: 8px 12px;
+    border: 2px solid #7e3333;
+    border-radius: 6px;
+    font-size: 14px;
+    background: #F5F1FF;
+}
+
+.inline-edit button {
+    align-self: flex-start;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    border: none;
+    background: #601d1d;
+    color: white;
+}
+
+.inline-edit button.cancel-edit {
+    background: #E74C3C;
+    margin-left: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        padding: 0 8px;
+    }
+
+    form {
+        gap: 8px;
+    }
+}
